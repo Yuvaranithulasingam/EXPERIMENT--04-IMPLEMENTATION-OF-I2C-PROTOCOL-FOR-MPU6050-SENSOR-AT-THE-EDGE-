@@ -1,20 +1,16 @@
- # EXPERIMENT-03-INTERFACING-DIGITAL-SENSOR-WITH-EDGE-DEVELOPMENT-BOARD-
+ # EXPERIMENT-04-INTERFACING-DIGITAL-SENSOR-WITH-EDGE-DEVELOPMENT-BOARD-
 
----
+### NAME: YUVARANI T  
+### DEPARTMENT: CSE(IOT)  
+### ROLL NO: 212222110057  
+### DATE OF EXPERIMENT: 
 
-### **NAME:**  
-### **DEPARTMENT:**  
-### **ROLL NO:**  
-### **DATE OF EXPERIMENT:**  
+## AIM:  
 
----
-
-## **AIM:**  
 To interface an **MPU6050 6-Axis Accelerometer & Gyroscope Sensor** with the **Raspberry Pi Pico** and display the sensor readings using MicroPython.
 
----
+## APPARATUS REQUIRED:
 
-## **APPARATUS REQUIRED:**  
 1. Raspberry Pi Pico  
 2. MPU6050 6-Axis Accelerometer & Gyroscope Sensor  
 3. Jumper Wires  
@@ -22,10 +18,10 @@ To interface an **MPU6050 6-Axis Accelerometer & Gyroscope Sensor** with the **R
 5. USB Cable  
 6. Computer with Thonny IDE  
 
----
+## THEORY:
 
-## **THEORY:**  
-### **About Raspberry Pi Pico:**  
+### About Raspberry Pi Pico: 
+
 Raspberry Pi Pico is a microcontroller board based on the **RP2040 chip**. It features:  
 - Dual-core ARM Cortex-M0+ processor  
 - 26 multi-function GPIO pins  
@@ -33,7 +29,8 @@ Raspberry Pi Pico is a microcontroller board based on the **RP2040 chip**. It fe
 - Interfaces like **I2C, SPI, UART, and PWM**  
 - Low power consumption, ideal for **IoT applications**  
 
-### **About MPU6050 Sensor:**  
+### About MPU6050 Sensor:  
+
 The **MPU6050** is a **6-Axis Inertial Measurement Unit (IMU)** that includes:  
 - **3-axis accelerometer** and **3-axis gyroscope**  
 - **I2C communication protocol** for easy interfacing  
@@ -43,18 +40,15 @@ The **MPU6050** is a **6-Axis Inertial Measurement Unit (IMU)** that includes:
 
 The **accelerometer** measures linear acceleration in **X, Y, Z axes**, while the **gyroscope** measures rotational velocity. The sensor communicates with the Raspberry Pi Pico via **I2C protocol**.
 
----
+## WORKING PRINCIPLE:
 
-## **WORKING PRINCIPLE:**  
 1. The **MPU6050 sensor** is connected to the **Raspberry Pi Pico** using the **I2C communication protocol**.  
 2. The **Pico reads acceleration and gyroscope values** from the sensor registers.  
 3. The data is **processed and displayed on the serial monitor**.  
 4. The readings can be used for **motion tracking, tilt sensing, or gesture recognition**.
 
----
-
-## **CIRCUIT DIAGRAM:**  
-### **Connections:**  
+## CIRCUIT DIAGRAM:  
+### Connections:  
 
 | MPU6050 Pin | Raspberry Pi Pico Pin |
 |------------|----------------------|
@@ -63,13 +57,10 @@ The **accelerometer** measures linear acceleration in **X, Y, Z axes**, while th
 | SDA | GP20 |
 | SCL | GP21 |
 
----
-
-## **PROGRAM (MicroPython)**  
-```python
+## PROGRAM (MicroPython)
+```
 from machine import Pin, I2C
 import utime
-
 # MPU6050 I2C address
 MPU6050_ADDR = 0x68
 
@@ -113,19 +104,19 @@ while True:
     utime.sleep(1)
 ```
 
----
+## OUTPUT:  
 
-## **OUTPUT:**  
 When the above program is executed, the output on the serial monitor will display real-time acceleration and gyroscope values, such as:
 ```
 Accel: X=0.02g, Y=-0.01g, Z=1.00g | Gyro: X=0.05°/s, Y=-0.02°/s, Z=0.01°/s
 Accel: X=0.03g, Y=-0.02g, Z=1.01g | Gyro: X=0.06°/s, Y=-0.03°/s, Z=0.02°/s
 ...
 ```
----
+![image](https://github.com/user-attachments/assets/06f9c636-fbc6-4314-9d92-85bf8dd190ae)
+![image](https://github.com/user-attachments/assets/5511985b-055c-403d-8816-f7499e47ce32)
+![image](https://github.com/user-attachments/assets/19dc2bb9-0da1-403d-a71b-c273604476da)
 
-## **RESULT:**  
+## RESULT: 
 The **MPU6050 sensor** was successfully interfaced with the **Raspberry Pi Pico**, and real-time **acceleration and gyroscope data** were read and displayed. The sensor values can be used for **motion tracking, tilt detection, and gesture control applications**.
 
----
 
